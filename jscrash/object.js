@@ -117,3 +117,28 @@ console.log(addNumsarrow(5,1));
 /////////////// O R  /////////////////
 const addNumsarrow1 = (num1 = 1,num2 = 3) => num1 + num2; 
 console.log(addNumsarrow1(5,10));
+
+
+
+
+//OOP programming
+function Person(firstname,lastname,dob) {
+	this.firstName = firstname;
+	this.lastName = lastname;
+	this.dob = new Date(dob);
+	this.getFullName = function() {
+		return `${this.firstName} ${this.lastName}`;
+	}
+}
+
+//Prototypes
+Person.prototype.getBirthYear = function () {
+	return this.dob.getFullYear();
+}
+
+//Instantiate Object
+const person1 = new Person('Vish', 'Doe' , '6-6-1995');
+
+console.log(person1);
+console.log(person1.dob.getFullYear());
+console.log(person1.getBirthYear(), person1.getFullName());
