@@ -42,3 +42,31 @@ const [Art,...music] = person.hobbies;
 console.log(Array.isArray(music));
 console.log(typeof(music),music);
 
+
+//Arrays of Objects
+
+const todos = [
+	{
+		id: 1,
+		text: 'Study',
+		isdone :true
+	},
+	{
+		id: 2,
+		text: 'Clean Tank',
+		isdone :false
+	},
+	{
+		id: 3,
+		text: 'Call Volunteers',
+		isdone :false
+	},
+];
+
+console.log(Array.isArray(todos));
+console.log(todos.length);
+console.log(todos[2].text);
+
+//Convert to JSON
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
