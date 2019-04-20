@@ -54,7 +54,7 @@ const todos = [
 	{
 		id: 2,
 		text: 'Clean Tank',
-		isdone :false
+		isdone :true
 	},
 	{
 		id: 3,
@@ -70,3 +70,34 @@ console.log(todos[2].text);
 //Convert to JSON
 const todoJSON = JSON.stringify(todos);
 console.log(todoJSON);
+
+//For Loop
+for (let i = 0; i < todos.length; i++) {
+	const element = todos[i];
+	console.log(element);
+	
+}
+
+//For Of loop better than above
+for (const todo of todos) {
+	console.log(todo.id);
+}
+
+//For Each Loop
+todos.forEach(todo => {
+	console.log(todo.isdone);
+});
+
+//Map returns an Array
+const todoText = todos.map(todo => {
+	return todo.text;
+});
+console.log(todoText);
+
+//Filter to return only if condition satisfied and map to return only text
+const todoCompleted = todos.filter(todo => {
+	return todo.isdone === false;
+}).map(todo => {
+	return todo.text;
+});
+console.log(Array.isArray(todoCompleted),todoCompleted);
