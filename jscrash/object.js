@@ -101,3 +101,19 @@ const todoCompleted = todos.filter(todo => {
 	return todo.text;
 });
 console.log(Array.isArray(todoCompleted),todoCompleted);
+
+
+//Functions
+function addNums(num1 = 1,num2 = 3) {
+	return num1 + num2;
+}
+console.log(addNums(5));
+
+//Arrow Functions
+const addNumsarrow = (num1 = 1,num2 = 3) => {
+	return num1 + num2;
+}
+console.log(addNumsarrow(5,1));
+/////////////// O R  /////////////////
+const addNumsarrow1 = (num1 = 1,num2 = 3) => num1 + num2; 
+console.log(addNumsarrow1(5,10));
