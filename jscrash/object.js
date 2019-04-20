@@ -142,3 +142,27 @@ const person1 = new Person('Vish', 'Doe' , '6-6-1995');
 console.log(person1);
 console.log(person1.dob.getFullYear());
 console.log(person1.getBirthYear(), person1.getFullName());
+
+
+
+//Class ES6 replacement of above
+class Personclass {
+	constructor(firstname, lastname, dob) {
+		this.firstName = firstname;
+		this.lastName = lastname;
+		this.dob = new Date(dob);
+	}
+	//Prototypes
+	getBirthYear() {
+		return this.dob.getFullYear();
+	}
+	getFullName() {
+		return `${this.firstName} ${this.lastName}`;
+	};
+}
+
+//Instantiate Object
+const person2 = new Personclass('Rachel', 'Doe' , '6-6-2018');
+console.log(person2);
+console.log(person2.dob.getFullYear());
+console.log(person2.getBirthYear(), person2.getFullName());
