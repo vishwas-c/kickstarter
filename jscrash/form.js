@@ -40,4 +40,7 @@ btnevent.addEventListener('click', (e) => {
   console.log(e);
   document.querySelector('#my-form').style.background= '#ccc';
   document.querySelector('body').classList.add('bg-dark');
+  document.querySelector('.items')
+  .lastElementChild.innerHTML = '<h3>Byeee</h3>';
 });
+
